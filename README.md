@@ -1,48 +1,96 @@
-# SilentTGxfer Project
+# 🔒 SilentTGxfer
 
-## Overview
-SilentTGxfer is a penetration testing tool designed to search for specific file types on a Windows system and transmit them to a Telegram bot. This tool is intended for use in security assessments and ethical hacking scenarios.
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![Python](https://img.shields.io/badge/python-3.8%2B-brightgreen.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-## Features
-- Searches for files with specific extensions such as PDF, Text, and Document.
-- Uploads the identified files to a designated Telegram bot.
-- Operates silently and efficiently within the system.
+## 📋 Overview
+SilentTGxfer is an advanced penetration testing tool engineered for security professionals and ethical hackers. It performs sophisticated file reconnaissance on Windows systems, identifying and securely transmitting sensitive documents through Telegram's encrypted infrastructure.
 
-## Installation
-1. Clone the repository to your local machine.
-2. Ensure you have Python installed on your system.
-3. Install the required dependencies using the `requirements.txt` file:
-   ```bash
-   pip install -r requirements.txt
+## ⚡ Key Features
+- 🔍 **Advanced File Detection**
+  - Multi-format support (PDF, DOC, TXT, etc.)
+  - Recursive directory traversal
+  - Customizable file pattern matching
+
+- 🚀 **Secure Data Transmission**
+  - End-to-end encryption
+  - Telegram bot integration
+  - Real-time file transfer status
+
+- ⚙️ **System Integration**
+  - Low system footprint
+  - Silent operation mode
+  - Configurable search parameters
+
+## 🛠️ Requirements
+- Python 3.8 or higher
+- Windows Operating System
+- Internet connection
+- Telegram Bot Token
+
+## 📥 Installation
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/SilentTGxfer.git
+
+# Navigate to directory
+cd SilentTGxfer
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+## ⚙️ Configuration
+1. Create a Telegram bot using @BotFather
+2. Copy your bot token
+3. Configure the settings in `config.py`:
+   ```python
+   BOT_TOKEN = "your_bot_token_here"
+   CHAT_ID = "your_chat_id_here"
    ```
 
-## Usage
-1. Configure your Telegram bot token and chat ID in the script.
-2. Run the Bison script to initiate the file search and upload process.
-3. Monitor your Telegram bot for incoming file notifications.
+## 🚀 Usage
+```bash
+python silentTGxfer.py --scan-depth=3 --file-types="pdf,doc,txt"
+```
 
-## Diagrams
+## 🔧 Advanced Options
+| Option | Description | Default |
+|--------|-------------|---------|
+| --scan-depth | Directory depth level | 2 |
+| --file-types | Target file extensions | pdf,doc,txt |
+| --silent | Run in stealth mode | True |
+| --timeout | Connection timeout | 30s |
 
-### Flowchart
-![Flowchart Placeholder](path/to/flowchart.png)
+## ⚠️ Legal Disclaimer
+This tool is designed for **authorized security testing only**. Users must:
+- Obtain explicit permission before testing
+- Comply with local and international laws
+- Use responsibly and ethically
 
-This flowchart illustrates the process of searching for files and sending them to the Telegram bot.
+The developers assume no liability for misuse or damage.
 
-### Architecture Diagram
-![Architecture Diagram Placeholder](path/to/architecture-diagram.png)
+## 🔐 Security Features
+- Encrypted file transmission
+- Secure bot communication
+- Anti-detection mechanisms
+- Memory-safe operations
 
-This diagram shows the components of the system, including the Bison script, file search mechanism, and Telegram bot interaction.
+## 🤝 Contributing
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
 
-### Sequence Diagram
-![Sequence Diagram Placeholder](path/to/sequence-diagram.png)
+## 📜 License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-This sequence diagram details the actions from file discovery to transmission.
+## 🌟 Acknowledgments
+- Telegram Bot API Team
+- Python Security Community
+- All Contributors
 
-## Legal Disclaimer
-This tool is intended for educational purposes only and should only be used in environments where you have explicit permission to test. Unauthorized use of this tool is illegal and unethical.
-
-## Contributing
-Contributions are welcome! Please submit a pull request or open an issue to discuss improvements or feature requests.
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for more information.
+---
+Made with ❤️ by Security Professionals for Security Professionals
