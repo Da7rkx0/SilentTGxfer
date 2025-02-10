@@ -52,7 +52,7 @@ pip install -r requirements.txt
 
 ## 🚀 Usage
 ```bash
-python silentTGxfer.py "
+python silentTGxfer.py 
 ```
 
 
