@@ -52,16 +52,10 @@ pip install -r requirements.txt
 
 ## 🚀 Usage
 ```bash
-python silentTGxfer.py --scan-depth=3 --file-types="pdf,doc,txt"
+python silentTGxfer.py "
 ```
 
-## 🔧 Advanced Options
-| Option | Description | Default |
-|--------|-------------|---------|
-| --scan-depth | Directory depth level | 2 |
-| --file-types | Target file extensions | pdf,doc,txt |
-| --silent | Run in stealth mode | True |
-| --timeout | Connection timeout | 30s |
+
 
 ## ⚠️ Legal Disclaimer
 This tool is designed for **authorized security testing only**. Users must:
