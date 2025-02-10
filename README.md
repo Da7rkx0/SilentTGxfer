@@ -8,7 +8,7 @@
 SilentTGxfer is an advanced penetration testing tool engineered for security professionals and ethical hackers. It performs sophisticated file reconnaissance on Windows systems, identifying and securely transmitting sensitive documents through Telegram's encrypted infrastructure.
 
 ## Video 
-![Video Demo](/assets/3eb73673-e48f-4eeb-bbc8-410647ec9b39)
+(/assets/3eb73673-e48f-4eeb-bbc8-410647ec9b39)
 
 ## ⚡ Key Features
 - 🔍 **Advanced File Detection**
