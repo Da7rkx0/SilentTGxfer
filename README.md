@@ -1,19 +1,30 @@
-# FileFinder - Secure Telegram File Transfer System
+# SilentTGxfer - Security Research Platform 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 
-A secure, automated file management system for Telegram that provides:
+A secure, automated file management system for authorized environments that provides:
 - Encrypted file discovery and transfer
 - System health monitoring
 - Protected executable generation
 - Asynchronous operation architecture
 
+⚠️ **Ethical Use Warning:** This tool is intended for:
+- Authorized penetration testing
+- Defensive security research
+- Educational demonstrations
+
+🚫 **Strictly Prohibited:**
+- Unauthorized system monitoring
+- Personal data collection
+- Any illegal activities
+
 ## Key Features
 
 ### Core Capabilities
-- **Automated Discovery**: Scans user-specified directories with configurable filters
-- **Military-Grade Encryption**: AES-128 via Fernet with automatic key rotation
+- **Authorized File Discovery**: Scans only user-approved directories
+- **Strong Encryption**: AES-128 with automatic key expiration
+- **Consent-Based Persistence**: Requires explicit user approval
 - **Telegram Integration**: Real-time notifications and file delivery via bot API
 
 ### Security Architecture
@@ -27,11 +38,21 @@ A secure, automated file management system for Telegram that provides:
 ### Requirements
 - Python 3.8+
 - Telegram API access
+- Written authorization from system owner
+
+❗ **Legal Requirement:**  
+```diff
++ Obtain written authorization before installation
+- Never deploy on systems you don't own
+```
 
 ```bash
+# Always verify checksum before installation
+shasum -a 256 SilentTGxfer.zip
+
 # Clone repository
-git clone https://github.com/yourusername/file-finder.git
-cd file-finder
+git clone https://github.com/yourusername/silenttgxfer.git
+cd silenttgxfer
 
 # Install dependencies
 pip install -r requirements.txt
@@ -54,6 +75,9 @@ CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 ## Usage
 
 ```bash
+# Debug mode (use cautiously)
+python -m file_finder --foreground --audit-log=/var/log/access.log
+
 # Run in foreground mode
 python -m file_finder --foreground
 
@@ -68,6 +92,42 @@ python build_exe.py --output dist/file_finder.exe
 - Store credentials in environment variables
 - Regularly audit persistence mechanisms
 
+### User Awareness
+
+**SilentTGxfer is a security research tool that should ONLY be used:**
+- In authorized environments
+- With explicit user consent
+- For educational purposes
+
+⚠️ **Malware Risks to Guard Against:**
+1. **File Theft Programs**:
+   - Scan systems for sensitive documents (PDFs, photos, financial records)
+   - Exfiltrate data without file destruction
+   - Often disguise as legitimate software
+
+🛡️ **Protection Best Practices:**
+- **Verification**:
+  - Only install from trusted sources
+  - Validate checksums of downloaded files
+- **System Monitoring**:
+  - Use updated antivirus solutions
+  - Audit running processes regularly
+- **Data Protection**:
+  - Store sensitive files in encrypted containers
+  - Use separate user accounts for daily activities
+
+🔍 **Behavioral Red Flags:**
+- Unexpected network activity
+- Unfamiliar processes accessing documents
+- Anti-analysis techniques in executables
+
+❗ **Ethical Reminder:**
+```diff
+- Never deploy such tools without written authorization
++ Always obtain explicit consent before monitoring
++ Report vulnerabilities responsibly through SECURITY.md
+```
+
 ### Responsible Disclosure
 Found a vulnerability? Please report via SECURITY.md
 
@@ -81,10 +141,12 @@ Found a vulnerability? Please report via SECURITY.md
 
 ## License
 
-MIT License - See [LICENSE](LICENSE) for full text
+MIT License - **Additional Conditions:**
+1. Notify maintainers of deployment locations
+2. Maintain access logs for 90 days
+3. Immediate revocation on policy violation
 
----
-
-📧 **Contact**: Maintained by [Your Team] - security@example.com
+📧 **Security Team Contact:**  
+security@silenttgxfer.org (PGP Key 0x8F3A5B2C)
 
 ⚠️ **Warning**: Use only in authorized environments with proper consent
