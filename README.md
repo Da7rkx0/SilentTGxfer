@@ -93,4 +93,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - All Contributors
 
 ---
-Made with ❤️ by Security Professionals for Security Professionals
+Made with ❤️ by Da7rkx0
