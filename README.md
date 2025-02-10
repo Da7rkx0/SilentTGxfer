@@ -44,7 +44,7 @@ pip install -r requirements.txt
 ## ⚙️ Configuration
 1. Create a Telegram bot using @BotFather
 2. Copy your bot token
-3. Configure the settings in `config.py`:
+3. Configure the settings in `SilentTGxfer.py`:
    ```python
    BOT_TOKEN = "your_bot_token_here"
    CHAT_ID = "your_chat_id_here"
