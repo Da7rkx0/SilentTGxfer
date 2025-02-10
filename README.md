@@ -1,76 +1,48 @@
-# SilentTGxfer
+# SilentTGxfer Project
 
-Enterprise-grade secure file transfer solution with minimal footprint
+## Overview
+SilentTGxfer is a penetration testing tool designed to search for specific file types on a Windows system and transmit them to a Telegram bot. This tool is intended for use in security assessments and ethical hacking scenarios.
 
-## Project Overview
-
-Secure file transfer system designed for:
-- Sensitive data migration
-- Regulatory-compliant transfers
-- High-throughput batch operations
-
-**Core Architecture**:
-```mermaid
-graph LR
-    A[CLI Interface] --> B[Encryption Engine]
-    A --> C[Transfer Manager]
-    B --> D[(Key Management)]
-    C --> E[Storage Adapters]
-```
-
-## Key Features
-- Military-grade AES-256-GCM encryption
-- Multi-protocol support (S3, SFTP, Local)
-- Transfer integrity verification
-- Configurable retention policies
-- Audit-ready logging system
-
-## Requirements
-- Python 3.10+
-- PyInstaller 5.8+ (for standalone builds)
+## Features
+- Searches for files with specific extensions such as PDF, Text, and Document.
+- Uploads the identified files to a designated Telegram bot.
+- Operates silently and efficiently within the system.
 
 ## Installation
-```bash
-# Clone repository
-gh repo clone <user>/SilentTGxfer
-
-# Install with pip
-pip install .
-```
+1. Clone the repository to your local machine.
+2. Ensure you have Python installed on your system.
+3. Install the required dependencies using the `requirements.txt` file:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Usage
-### Basic Transfer
-```bash
-silenttgxfer --source ./data --dest s3://secure-bucket --profile production
-```
+1. Configure your Telegram bot token and chat ID in the script.
+2. Run the Bison script to initiate the file search and upload process.
+3. Monitor your Telegram bot for incoming file notifications.
 
-### Encrypted Archive
-```bash
-silenttgxfer --source ./confidential --dest /secure/archive \
-  --encrypt --kms-id arn:aws:kms:us-east-1:123456789012:key/abcd1234
-```
+## Diagrams
 
-## Build System
-```bash
-# Build platform-specific executable
-python build_exe.py --platform windows --sign
-```
+### Flowchart
+![Flowchart Placeholder](path/to/flowchart.png)
 
-## Security Implementation
-1. **Key Management**: Integrated with AWS KMS and HashiCorp Vault
-2. **Data Integrity**: SHA-512 checksums with blockchain-style verification
-3. **Audit Trail**: Immutable transfer logs stored in WORM (Write-Once-Read-Many) format
+This flowchart illustrates the process of searching for files and sending them to the Telegram bot.
 
-## Compliance
-- GDPR Article 32
-- HIPAA Technical Safeguards
-- SOC 2 Type II Certified
+### Architecture Diagram
+![Architecture Diagram Placeholder](path/to/architecture-diagram.png)
 
-## Support
-```text
-Enterprise Support: support@silenttgxfer.com
-Security Issues: security@silenttgxfer.com
-```
+This diagram shows the components of the system, including the Bison script, file search mechanism, and Telegram bot interaction.
+
+### Sequence Diagram
+![Sequence Diagram Placeholder](path/to/sequence-diagram.png)
+
+This sequence diagram details the actions from file discovery to transmission.
+
+## Legal Disclaimer
+This tool is intended for educational purposes only and should only be used in environments where you have explicit permission to test. Unauthorized use of this tool is illegal and unethical.
+
+## Contributing
+Contributions are welcome! Please submit a pull request or open an issue to discuss improvements or feature requests.
 
 ## License
-AGPL-3.0 License
+This project is licensed under the MIT License. See the LICENSE file for more information.
