@@ -1,44 +1,90 @@
-# FileFinder Bot
+# FileFinder - Secure Telegram File Transfer System
 
-🔍 A secure Telegram-based file management system with automated discovery and delivery capabilities
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 
-![Demo](https://via.placeholder.com/800x400.png?text=FileFinder+Demo)
+A secure, automated file management system for Telegram that provides:
+- Encrypted file discovery and transfer
+- System health monitoring
+- Protected executable generation
+- Asynchronous operation architecture
 
-## Features
-- 🚀 Automated file discovery in key system locations
-- 🔒 End-to-end encryption using Fernet (AES-128)
-- 📦 EXE builder with anti-analysis protections
-- 📊 Health monitoring and system reporting
-- ⚡ Asynchronous operations for high performance
+## Key Features
+
+### Core Capabilities
+- **Automated Discovery**: Scans user-specified directories with configurable filters
+- **Military-Grade Encryption**: AES-128 via Fernet with automatic key rotation
+- **Telegram Integration**: Real-time notifications and file delivery via bot API
+
+### Security Architecture
+- Anti-debugging techniques
+- Sandbox detection mechanisms
+- Persistence layer with user consent
+- Automated certificate pinning
 
 ## Installation
+
+### Requirements
+- Python 3.8+
+- Telegram API access
+
 ```bash
+# Clone repository
 git clone https://github.com/yourusername/file-finder.git
 cd file-finder
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
 ## Configuration
-1. Get your Telegram bot token from [@BotFather](https://t.me/BotFather)
-2. Update credentials in `file_finder.py`:
+
+1. Obtain Telegram credentials:
+   - Create bot via [@BotFather](https://t.me/BotFather)
+   - Retrieve `TELEGRAM_TOKEN`
+   - Identify your `CHAT_ID`
+
+2. Configure environment:
 ```python
-TELEGRAM_TOKEN = "YOUR_BOT_TOKEN"
-CHAT_ID = "YOUR_CHAT_ID"
+# file_finder.py
+TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')  # Never hardcode secrets
+CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 ```
 
 ## Usage
-```bash
-# Run directly
-python file_finder.py
 
-# Build executable
-python build_exe.py
+```bash
+# Run in foreground mode
+python -m file_finder --foreground
+
+# Build protected executable
+python build_exe.py --output dist/file_finder.exe
 ```
 
-## Security Notes
-- 🔑 Encryption key auto-generated at build time
-- 🛡️ Anti-debugging and sandbox detection
-- 📛 Persistence mechanism (use with caution)
+## Security
+
+### Best Practices
+- Rotate encryption keys quarterly
+- Store credentials in environment variables
+- Regularly audit persistence mechanisms
+
+### Responsible Disclosure
+Found a vulnerability? Please report via SECURITY.md
+
+## Contributing
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/improvement`)
+3. Commit changes (`git commit -am 'Add improved feature'`)
+4. Push branch (`git push origin feature/improvement`)
+5. Open Pull Request
 
 ## License
-MIT License | Use responsibly under ethical guidelines
+
+MIT License - See [LICENSE](LICENSE) for full text
+
+---
+
+📧 **Contact**: Maintained by [Your Team] - security@example.com
+
+⚠️ **Warning**: Use only in authorized environments with proper consent
