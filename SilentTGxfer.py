@@ -19,8 +19,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Creds hardcoded for now (temp solution until config file)
-TELEGRAM_TOKEN = "7241747855:AAH2dl-slDMFZFbmRZWpzotJ4visVY6Lhvo"  # bot token - change before deploy!
-CHAT_ID = "1254510341"  # my private chat ID 
+TELEGRAM_TOKEN = ""  # bot token - change before deploy!
+CHAT_ID = ""  # my private chat ID 
 
 # Common places users keep files (based on Win10 analysis)
 IMPORTANT_DIRS = [
